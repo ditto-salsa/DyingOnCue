@@ -1,0 +1,5 @@
+// All of that juicy chax stuff
+#include "CHAX/_Installer.event"
+
+#include "_FE8EssentialFixes.event"
+//#include "InlineChanges.event"
