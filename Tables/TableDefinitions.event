@@ -12,12 +12,6 @@
 #ifndef ItemTable
   #define ItemTable 0x809B10
 #endif
-#ifndef DebuffTableRam
-  #define DebuffTableRam 0x203f100
-#endif
-//#ifndef PersonalMusicTable
-  //#define PersonalMusicTable 0x758a60
-//#endif
 
 
 //Weapon Ranks
@@ -132,39 +126,6 @@
 #define LightAffinity 6
 #define AnimaAffinity 7
 
-#define negateByte(byte) "0x100-byte"
-#define IsPointer 0x8000000
-
-  #define defWTAAdvantage(attackingType, defendingType) "BYTE attackingType defendingType"//"BYTE attackingType defendingType 0x0F 0x01"
-  #define defWTADisadvantage(attackingType, defendingType) "BYTE defendingType attackingType" //"BYTE attackingType defendingType 0xF1 0xFF"
-  #define endWTATable "BYTE 0xFF 0xFF"
-
-  #define defStatBoosts(hp, str, mag, skl, spd, luk, def, res) "BYTE hp str skl spd def res luk mag"
-  #define defWeaponDebuffs(str, skl, spd, luk, def, res, mag) "BYTE (str|(skl<<4)) (spd|(def<<4)) (res|(luk<<4)) mag"
-
-  // Higher bit debuff definitions for use in the item table debuff table index byte
-  #define SilverDebuff 0x20
-  #define HalveMag 0x40 // Requires Str/Mag Split for functionality
-  #define HalveStr 0x80
-  // Use in conjunction with debuff table entry with orr operations
-    // (Debuff table entries max at 0x1F)
-
-// ######################################################################
-//Relating to Tequila's slayer/effectiveness rework
-//Used in the class editor and item editor tables
-//To understand how this works, check out Engine Hacks/Skill System/Teq Skills/FE8-Nullify/_README.txt
-#define ArmorType	0x01
-#define HorseType	0x02
-#define FlierType	0x04
-#define DragonType	0x08
-#define MonsterType	0x10
-#define SwordType	0x20
-//Used with Dragz's Effectiveness Items
-/*
-#define Flammable 0x40
-#define Doused	0x80
-*/
-
 //Status Effects
 #define NoStatusID 0
 #define PoisonStatusID 1
@@ -185,5 +146,3 @@
 #define ItemStatus(StatusID,Duration) "StatusID | (Duration << 4)"
 
 #endif
-
-#include "ExternalTables.event"

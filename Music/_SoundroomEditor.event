@@ -1,0 +1,37 @@
+#define Soundroom(songID,songLength,songName) "WORD songID songLength 0 songName"
+#define ASMSoundroom(songID,songLength,displayCondASM,songName) "WORD songID songLength; POIN displayCondASM; WORD songName"
+
+ALIGN 4
+NewSoundRoom:
+Soundroom(PointOfNoReturn,9999,PointOfNoReturn_Text)
+Soundroom(Sky_Peak_Final_Pass,9999,Sky_Peak_Final_Pass_Text)
+Soundroom(The_One_They_Call_Witch,9999,The_One_They_Call_Witch_Text)
+Soundroom(NessiahSortie,9999,NessiahSortie_Text)
+Soundroom(GulcasaSortie,9999,GulcasaSortie_Text)
+WORD (-1) 0 0 0
+
+//Repointing
+PUSH
+ORG $1BC14
+POIN NewSoundRoom
+ORG $1BCC4
+POIN NewSoundRoom
+ORG $AECA8
+POIN NewSoundRoom
+ORG $AECD0
+POIN NewSoundRoom
+ORG $AED2C
+POIN NewSoundRoom
+ORG $AEEBC
+POIN NewSoundRoom
+ORG $AF438
+POIN NewSoundRoom
+ORG $AF830
+POIN NewSoundRoom
+ORG $AFE30
+POIN NewSoundRoom
+ORG $B0080
+POIN NewSoundRoom
+ORG $B042C
+POIN NewSoundRoom
+POP

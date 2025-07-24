@@ -1,27 +1,51 @@
 #include "EAstdlib.event"
-#include "CustomDefinitions.event"
+#include "Definitions/_DefsInstaller.event"
 ORG FreeSpace
 
-#include "repointedTextTable.event"
-
 //Text first for Text ID definitions
+#define StartOfTextSpace currentOffset
+#include "repointedTextTable.event"
 #include "Text/InstallTextData.event"
-MESSAGE Used text space ends at currentOffset
+#define EndOfTextSpace "currentOffset - StartOfTextSpace"
+MESSAGE Used text space is EndOfTextSpace big and ends at currentOffset
 
 //CSV tables
+#define StartOfTableSpace currentOffset
 #include "Tables/TableInstaller.event"
-MESSAGE Used table space ends at currentOffset
+#define EndOfTableSpace "currentOffset - StartOfTableSpace"
+MESSAGE Used table space is EndOfTableSpace big and ends at currentOffset
 
 //Engine Hacks
+#define StartOfHaxSpace currentOffset
 #include "EngineHacks/_EngineHacksInstaller.event"
-MESSAGE Used hax space ends at currentOffset
-	
+#define EndOfHaxSpace "currentOffset - StartOfHaxSpace"
+MESSAGE Used hax space is EndOfHaxSpace big and ends at currentOffset
+
+//Graphics
+#define StartOfGraphicsSpace currentOffset
+#include "Graphics/GraphicsInstaller.event"
+#define EndOfGraphicsSpace "currentOffset - StartOfGraphicsSpace"
+MESSAGE Used graphics space is EndOfGraphicsSpace big and ends at currentOffset
+
+//Music
+#define StartOfMusicSpace currentOffset
+#include "Music/_Music Installer.event"
+#define EndOfMusicSpace "currentOffset - StartOfMusicSpace"
+MESSAGE Used music space is EndOfMusicSpace big and ends at currentOffset
+
 //Events
+#define StartOfEventsSpace currentOffset
 #include "Events/_EventInstaller.event"
+#define EndOfEventsSpace "currentOffset - StartOfEventsSpace"
+MESSAGE Used events space is EndOfEventsSpace big and ends at currentOffset
 
 //Maps
+#define StartOfMapsSpace currentOffset
 #include "Maps/MasterMapInstaller.event"
-	
+#define EndOfMapsSpace "currentOffset - StartOfMapsSpace"
+MESSAGE Used maps space is EndOfMapsSpace big and ends at currentOffset
+
 ASSERT (FreeSpaceEnd - currentOffset) // So that you don't overwrite vanilla tables if using default freespace
-	
-MESSAGE Used free space ends at currentOffset
+
+#define TotalChangeSize "currentOffset - FreeSpace"
+MESSAGE Used free space ends at currentOffset and changes in total are TotalChangeSize big

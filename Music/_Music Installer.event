@@ -1,0 +1,106 @@
+#define SongTableOffset  0x224470
+//2263B0 is the end maybe?
+#include "drumfix_fe8.event"
+voicegroup000:
+#incbin "FE8_NI_2.bin"
+
+ALIGN 4
+//#include "AllInstrument/AllInstrument.event" // i hope i don't have to include this ever, but if i NEED it,
+
+#include "ea/MPlayDef.event"
+
+#include "AircaliburEckesachsBindingBladeFix.event"
+
+#define SongTable(index,SongPointer,Group) "PUSH; ORG SongTableOffset+(8*index); POIN SongPointer; SHORT Group Group; POP"
+#define BattleMusicGroup 0
+#define MapMusicGroup 1
+#define SFXGroup 6
+
+#include "ea/UpperSteamCave.event"
+SongTable(0x43,UpperSteamCave_Song,0)
+#define UpperSteamCave 0x43
+
+#include "ea/Clashing_of_Waves.event"
+SongTable(0x3,ClashingOfWaves_Song,1)
+#define ClashingOfWaves 0x3
+
+#include "ea/DELTARUNE_Smart_Race.event"
+SongTable(0x4,DELTARUNE_Smart_Race_Song,0)
+#define SmartRace 0x4
+
+#include "ea/Palace_Denpa_Men_2.event"
+SongTable(0x5,Palace_Denpa_Men_2_Song,1)
+#define PalaceDenpaMen2 0x5
+
+#include "ea/FieldBattle.event"
+SongTable(0x6,rottk4fb_Song,1)
+#define FieldBattle 0x6
+
+#include "ea/Departure!.event"
+SongTable(0x7,rffield_Song,1)
+#define Departure 0x7
+
+#include "ea/MelliaSortie.event"
+SongTable(0x8,L_Mellia_Sortie_Song,0)
+#define MelliaSortie 0x8
+
+#include "ea/PointOfNoReturn.event"
+SongTable(0x9,PointOfNoReturn_Song,0)
+#define PointOfNoReturn 0x9
+
+#include "ea/GulcasaSortie.event"
+SongTable(0xA,GulcasaSortie_Song,0)
+#define GulcasaSortie 0xA
+
+#include "ea/NessiahSortie.event"
+SongTable(0xB,NessiahSortie_Song,0)
+#define NessiahSortie 0xB
+
+#include "ea/Sky_Peak_Final_Pass.event"
+SongTable(0xC,Sky_Peak_Final_Pass_Song,1)
+#define Sky_Peak_Final_Pass 0xC
+
+#include "ea/The_One_They_Call_Witch.event"
+SongTable(0xD,The_One_They_Call_Witch_Song,0)
+#define The_One_They_Call_Witch 0xD
+
+#include "ea/Daughter_of_the_Dark_God.event"
+SongTable(0xE,Daughter_of_the_Dark_God_Song,0)
+#define Daughter_of_the_Dark_God 0xE
+
+#include "ea/Evil_Church.event"
+SongTable(0xF,Evil_Church_Song,0)
+#define EvilChurch 0xF
+
+#include "ea/CelicaMap1SSBB.event"
+SongTable(0x10,CelicaMap1SSBB_Song,1)
+#define CelicaMap1 0x10
+
+#include "ea/Growing_Anxiety.event"
+SongTable(0x11,Growing_Anxiety_Song,1)
+#define Growing_Anxiety 0x11
+
+#include "ea/FE4_Neutral_Army.event"
+SongTable(0x12,FE4_Neutral_Army_Song,1)
+#define FE4_Neutral_Army 0x12
+
+#include "ea/DPPt_LegendaryPokemon.event"
+SongTable(0x13,DPPt_LegendaryPokemon_Song,0)
+#define DPPt_LegendaryPokemon 0x13
+
+#include "ea/WaterWorld.event"
+SongTable(0x14,WaterWorld_Song,1)
+#define WaterWorld 0x14
+
+#include "_SoundroomEditor.event"
+
+FE8SoundMixer:
+#incbin "FE8_Improved_Sound_Mixer.bin"
+PUSH
+ORG $D01CC 
+POIN FE8SoundMixer
+ORG $D01D0
+BYTE $B0 $6C $00 $03 $18 $02
+ORG $CF53C
+BYTE $B1 $6C $00 $03
+POP

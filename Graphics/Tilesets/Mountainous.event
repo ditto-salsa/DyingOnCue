@@ -1,0 +1,13 @@
+ALIGN 4; Mountainous_OBJ:
+#incbin "dmp/Mountainous.lz77"
+
+/*
+ALIGN 4; Mountainous_PAL:
+#incbin "dmp/Mountainous.pal"
+
+ALIGN 4; Mountainous_PAL2:
+BYTE $1F $02 $B4 $52 $8E $42 $39 $2B $FF $63 $19 $00 $8F $53 $53 $1E $6F $19 $D9 $2E $BD $43 $95 $26 $AD $25 $FF $7F $9A $77 $3F $05 $00 $38 $B7 $3A $8D $29 $04 $67 $00 $67 $23 $66 $02 $56 $C1 $4D $60 $41 $D2 $4B $CF $5B $70 $53 $30 $4B $32 $43 $5A $4B $32 $2A $00 $38 $2E $4F $12 $52 $CF $63 $B2 $4B $54 $5F $0F $57 $32 $43 $FF $7F $93 $3F $F2 $7F $47 $53 $C9 $52 $A8 $46 $ED $41 $EF $6B $00 $38 $DE $5F $9C $3F $7B $3F $55 $2A $F1 $25 $91 $3F $17 $3F $D7 $36 $ED $4A $95 $3A $51 $2E $AC $21 $F0 $21 $FF $6B $FD $57 $00 $38 $FF $77 $FB $7F $D9 $4F $93 $4F $4E $53 $AF $4A $4D $52 $ED $45 $FF $63 $7D $77 $5C $4B $78 $46 $10 $3A $AF $41 $E8 $7F $00 $00 $57 $63 $55 $63 $9B $5F $FE $77 $1C $42 $B8 $6B $39 $4F $B7 $4E $7C $5B $DE $63 $5A $53 $D6 $52 $FF $7F $DE $7B $9F $42 $00 $10 $7C $5B $D6 $56 $90 $73 $90 $73 $31 $6F $10 $6B $F0 $66 $B0 $62 $F7 $6F $D7 $6B $B9 $67 $98 $67 $99 $67 $BE $67 $19 $57 $00 $10 $97 $67 $18 $5F $F7 $73 $D9 $63 $BA $6F $97 $67 $99 $63 $DE $77 $D9 $63 $F7 $77 $B3 $6B $74 $6B $55 $63 $F6 $62 $F7 $73 $00 $10 $FE $6B $DE $5F $BD $5F $3A $57 $F8 $52 $D8 $5F $9B $5F $7B $5B $76 $67 $5A $5F $38 $57 $D6 $52 $F8 $52 $FF $73 $FE $6B $00 $10 $9F $6C $FE $7B $BE $67 $D9 $67 $B7 $6B $78 $67 $36 $6B $F5 $62 $DE $77 $BE $7B $BE $67 $3C $63 $18 $5F $D7 $62 $F4 $7F
+*/
+
+ALIGN 4; Mountainous_CONFIG:
+#incbin "dmp/Mountainous.config"

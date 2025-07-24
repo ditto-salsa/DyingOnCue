@@ -1,0 +1,23 @@
+#include "Mugs/Mugs Installer.event"
+
+#include "MapSprites/Installer.event"
+
+#include "ItemIcons/Installer.event"
+
+#include "Palettes/Palette Setup.event"
+
+#include "Animation/Master Animation Installer.event"
+
+#include "BattleScreen/Installer.event"
+
+#include "StatScreen/StatScreenInstaller.event"
+
+//#include "MenuUI/Installer.event" //Don't include until UI has been done.
+
+#include "Tilesets/_TilesetInstaller.event"
+
+//Change which portrait the supply uses to JessPortrait
+PUSH
+ORG 0x9D70E
+BYTE JessPortrait
+POP

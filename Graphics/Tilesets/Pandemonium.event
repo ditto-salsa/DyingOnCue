@@ -1,0 +1,36 @@
+ALIGN 4; Pandemonium_OBJ:
+#incbin "dmp/Pandemonium.lz77"
+
+ALIGN 4; Pandemonium_PAL:
+#incbin "palettes/Pandemonium.pal"
+
+ALIGN 4; Pandemonium_CONFIG:
+#incbin "dmp/Pandemonium.config"
+
+ALIGN 8; Pandemonium_ANIM1:
+//interval, size, POIN
+SHORT 0x1C 0x1000; POIN Pandemonium_ANIM1_1
+SHORT 0x1C 0x1000; POIN Pandemonium_ANIM1_2
+SHORT 0x1C 0x1000; POIN Pandemonium_ANIM1_3
+SHORT 0x1C 0x1000; POIN Pandemonium_ANIM1_4
+SHORT 0x1C 0x1000; POIN Pandemonium_ANIM1_5
+SHORT 0x1C 0x1000; POIN Pandemonium_ANIM1_6
+WORD 0 0
+
+ALIGN 4; Pandemonium_ANIM1_1:
+#incbin "dmp/Pandemonium1.anim1"
+
+ALIGN 4; Pandemonium_ANIM1_2:
+#incbin "dmp/Pandemonium2.anim1"
+
+ALIGN 4; Pandemonium_ANIM1_3:
+#incbin "dmp/Pandemonium3.anim1"
+
+ALIGN 4; Pandemonium_ANIM1_4:
+#incbin "dmp/Pandemonium4.anim1"
+
+ALIGN 4; Pandemonium_ANIM1_5:
+#incbin "dmp/Pandemonium5.anim1"
+
+ALIGN 4; Pandemonium_ANIM1_6:
+#incbin "dmp/Pandemonium6.anim1"

@@ -1,0 +1,8 @@
+ALIGN 4; Super_Fields_OBJ:
+#incbin "dmp/Super_Fields.lz77"
+
+ALIGN 4; Super_Fields_PAL:
+#incbin "dmp/Super_Fields.pal"
+
+ALIGN 4; Super_Fields_CONFIG:
+#incbin "dmp/Super_Fields.config"

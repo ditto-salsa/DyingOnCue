@@ -63,6 +63,12 @@ if /I not [%1]==[quick] (
   echo: | ("%tmx2ea%" -s -O "MasterMapInstaller.event")
   
   echo:
+  echo Fixing tmx2ea's macros for my own purposes god why can't I do anything the easy way
+  
+  cd "%base_dir%Tools\PTABLE_Macro_Fix\
+  PTABLE_Macro_Fix.exe
+  
+  echo:
   echo Compiling C code in CHAX folder...
   
   cd "%base_dir%EngineHacks\CHAX"

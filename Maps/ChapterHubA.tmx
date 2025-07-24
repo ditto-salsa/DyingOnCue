@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="FE8 - Mountainous.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="15" height="10">
+ <properties>
+   <property name="Anims1" value="0x1"/>
+   <property name="Anims2" value="0"/>
+   <property name="ChapterID" value="0"/>
+   <property name="Main" value=""/>
+   <property name="MapChangesID" value="0"/>
+   <property name="MapID" value="1"/>
+   <property name="ObjectType" value="0x3"/>
+   <property name="PaletteID" value="0x16"/>
+   <property name="TileConfig" value="0x3"/>
+  </properties>
+  <data encoding="csv">
+197,197,197,197,197,197,197,197,197,197,197,197,197,197,197,
+197,197,197,197,197,901,775,775,775,902,197,197,197,197,197,
+197,901,775,775,775,902,871,849,871,901,775,775,775,902,197,
+775,934,1007,1007,1007,906,1007,881,1007,906,1007,1007,1007,869,775,
+1007,1007,1007,1007,1007,921,1007,1007,1007,921,1007,1007,1007,1007,1007,
+470,470,470,470,1007,1007,266,267,268,1007,1007,470,470,470,470,
+470,470,470,470,470,1007,298,299,300,1007,470,470,470,470,470,
+470,470,470,470,470,1007,1007,1007,1007,1007,470,470,470,470,470,
+470,470,470,470,470,470,470,470,470,470,470,470,470,470,470,
+470,470,470,470,470,470,470,470,470,470,470,470,470,470,470
+</data>
+ </layer>
+</map>
