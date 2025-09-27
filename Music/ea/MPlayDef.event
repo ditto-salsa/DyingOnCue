@@ -464,6 +464,6 @@
 //******************************************************//
 
 	#define	reverb_set 0x80		// SOUND_MODE_REVERB_SET
-	#define	PAM  PAN		//
+	#define	PAM  PAN		// 
 
 #endif

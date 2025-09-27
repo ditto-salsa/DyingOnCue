@@ -23,6 +23,6 @@ SetTileAnim(0x8, CastleV2_ANIM1)
 
 #include "Mountainous.event"
 SetTilesetObject(0x3, Mountainous_OBJ)
-//SetTilesetPalette(0x, Mountainous_PAL) // 0x15
-//SetTilesetPalette(0x, Mountainous_PAL2) // 0x16
+SetTilesetPalette(0x1A, Mountainous_PAL)
+SetTilesetPalette(0x1B, Mountainous_PAL2)
 SetTilesetConfig(0x3, Mountainous_CONFIG)

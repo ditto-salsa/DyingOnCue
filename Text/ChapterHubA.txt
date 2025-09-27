@@ -1,0 +1,24 @@
+## LazarusSigilAskText
+Do you wish to view the activity[N]
+of Lazarus, the Phoenix Witch?[N]
+[Yes][X]
+
+## SamaelSigilAskText
+Do you wish to view the activity[N]
+of Samael, the Steel Lion?[N]
+[Yes][X]
+
+## JessSigilAskText
+Do you wish to view the activity[N]
+of Jess, the Scarlet Lancer?[N]
+[Yes][X]
+
+## SerolSigilAskText
+Do you wish to view the activity[N]
+of Serol, the Peerless Plainsman?[N]
+[Yes][X]
+
+## ThisSigilIsNotReadyText
+Unfortunately, this sigil is[N]
+non-functional as of this version.[N]
+Please try a different sigil.[A][X]

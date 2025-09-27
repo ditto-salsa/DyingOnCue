@@ -268,7 +268,7 @@ Label_1_551729:
  BYTE   TIE  An3  v100
  BYTE   TIE  Cs4
  BYTE   W96
- BYTE   PEND
+ BYTE   PEND 
 // 031   ----------------------------------------
  BYTE   W96
 // 032   ----------------------------------------
@@ -353,7 +353,7 @@ Label_2_55177F:
  BYTE   W24
  BYTE   TIE  Cs4
  BYTE   W72
- BYTE   PEND
+ BYTE   PEND 
 // 011   ----------------------------------------
  BYTE   W96
 // 012   ----------------------------------------
@@ -373,7 +373,7 @@ Label_2_551792:
  BYTE   W48
  BYTE   Gs3
  BYTE   W48
- BYTE   PEND
+ BYTE   PEND 
 // 015   ----------------------------------------
  BYTE   Cs4
  BYTE   W48
@@ -637,7 +637,7 @@ Label_4_552762:
  BYTE   TIE  Cs2  v100
  BYTE   TIE  Gs2
  BYTE   W96
- BYTE   PEND
+ BYTE   PEND 
 // 005   ----------------------------------------
  BYTE   W96
 // 006   ----------------------------------------
@@ -647,7 +647,7 @@ Label_4_55276D:
  BYTE   TIE  Bn1  v100
  BYTE   TIE  Gs2
  BYTE   W96
- BYTE   PEND
+ BYTE   PEND 
 // 007   ----------------------------------------
  BYTE   W96
 // 008   ----------------------------------------
@@ -800,7 +800,7 @@ Label_5_5527F6:
  BYTE   W08
  BYTE   Gs1
  BYTE   W08
- BYTE   PEND
+ BYTE   PEND 
 // 009   ----------------------------------------
  BYTE   N08
  BYTE   W96
@@ -850,7 +850,7 @@ Label_5_552827:
  BYTE   W06
  BYTE   N06
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 // 021   ----------------------------------------
 Label_5_55283C:
  BYTE   N06  Fs1  v100
@@ -871,7 +871,7 @@ Label_5_55283C:
  BYTE   W06
  BYTE   N06
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 // 022   ----------------------------------------
  BYTE   PATT
   POIN2 Label_5_552827
@@ -895,7 +895,7 @@ Label_5_552856:
  BYTE   W06
  BYTE   N06
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 // 024   ----------------------------------------
  BYTE   PATT
   POIN2 Label_5_552827
@@ -934,7 +934,7 @@ Label_5_552889:
  BYTE   W06
  BYTE   N06
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 // 031   ----------------------------------------
  BYTE   PATT
   POIN2 Label_5_552889
@@ -1048,7 +1048,7 @@ Label_6_5528F2:
  BYTE   W12
  BYTE   Ds3
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 // 029   ----------------------------------------
  BYTE   N24  En3
  BYTE   W24
@@ -1156,7 +1156,7 @@ Label_7_55295B:
  BYTE   W08
  BYTE   N08
  BYTE   W48
- BYTE   PEND
+ BYTE   PEND 
 // 010   ----------------------------------------
  BYTE   W96
 // 011   ----------------------------------------
@@ -1244,7 +1244,7 @@ Label_8_551E03:
  BYTE   W48
  BYTE   Cn1
  BYTE   W48
- BYTE   PEND
+ BYTE   PEND 
 // 005   ----------------------------------------
  BYTE   PATT
   POIN2 Label_8_551E03
@@ -1257,7 +1257,7 @@ Label_8_551E14:
  BYTE   W48
  BYTE   Dn1
  BYTE   W48
- BYTE   PEND
+ BYTE   PEND 
 // 008   ----------------------------------------
 Label_8_551E1B:
  BYTE   N06  Cn1  v127
@@ -1266,7 +1266,7 @@ Label_8_551E1B:
  BYTE   W24
  BYTE   Dn1
  BYTE   W48
- BYTE   PEND
+ BYTE   PEND 
 // 009   ----------------------------------------
  BYTE   PATT
   POIN2 Label_8_551E14
@@ -1310,7 +1310,7 @@ Label_8_551E5B:
  BYTE   W24
  BYTE   Dn1
  BYTE   W48
- BYTE   PEND
+ BYTE   PEND 
 // 021   ----------------------------------------
  BYTE   PATT
   POIN2 Label_8_551E5B
@@ -1382,7 +1382,7 @@ Label_8_551EAB:
  BYTE   W12
  BYTE   N06
  BYTE   W24
- BYTE   PEND
+ BYTE   PEND 
 // 029   ----------------------------------------
  BYTE   PATT
   POIN2 Label_8_551EAB
@@ -1423,9 +1423,9 @@ Palace_Denpa_Men_2_Song:
 	BYTE	0	// NumBlks
 	BYTE	Palace_Denpa_Men_2_Song_pri	// Priority
 	BYTE	Palace_Denpa_Men_2_Song_rev	// Reverb.
-
+    
 	POIN2	Palace_Denpa_Men_2_Song_grp
-
+    
 	POIN2	Palace_Denpa_Men_2_Song_001
 	POIN2	Palace_Denpa_Men_2_Song_002
 	POIN2	Palace_Denpa_Men_2_Song_003
@@ -1436,4 +1436,4 @@ Palace_Denpa_Men_2_Song:
 	POIN2	Palace_Denpa_Men_2_Song_008
 	POIN2	Palace_Denpa_Men_2_Song_009
 
-
+	

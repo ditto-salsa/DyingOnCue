@@ -1,0 +1,13 @@
+## UM_SigilName
+ Sigil[X]
+ 
+## UM_SigilDesc
+A sigil of great magical power.[N]
+Use it to see the perspectives of[N]
+prominent figures around the world.[X]
+
+## UM_SigilFrozenHelpBox
+This sigil is inactive.[X]
+
+## GenericCannotUseFrozenHelpBox
+This command can't be used right now.[X]

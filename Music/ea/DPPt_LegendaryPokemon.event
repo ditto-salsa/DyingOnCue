@@ -69,7 +69,7 @@ Label_54A2AE:
  BYTE   W12
  BYTE   En1
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 //  #01 //006   ----------------------------------------
 Label_54A2C1:
  BYTE   N11  Cn1  v112
@@ -88,7 +88,7 @@ Label_54A2C1:
  BYTE   W12
  BYTE   Fs1
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 //  #01 //007   ----------------------------------------
 Label_54A2D4:
  BYTE   N11  Cn1  v112
@@ -107,7 +107,7 @@ Label_54A2D4:
  BYTE   W12
  BYTE   Gn1
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 //  #01 //008   ----------------------------------------
 Label_54A2E7:
 //  #01 //009   ----------------------------------------
@@ -1048,7 +1048,7 @@ Label_0111F539:
  BYTE   W24
  BYTE   En2
  BYTE   W24
- BYTE   PEND
+ BYTE   PEND 
 //  #07 //014   ----------------------------------------
 Label_0111F547:
  BYTE   N23  Cn2  v112
@@ -1060,7 +1060,7 @@ Label_0111F547:
  BYTE   W24
  BYTE   En2
  BYTE   W24
- BYTE   PEND
+ BYTE   PEND 
 //  #07 //015   ----------------------------------------
  BYTE   PATT
   POIN2 Label_0111F539
@@ -1231,7 +1231,7 @@ Label_0111F633:
  BYTE   W06
  BYTE   N05
  BYTE   W06
- BYTE   PEND
+ BYTE   PEND 
 //  #08 //006   ----------------------------------------
 Label_0111F673:
  BYTE   N11  Cn1  v127
@@ -1267,7 +1267,7 @@ Label_0111F673:
  BYTE   W12
  BYTE   N11  As1
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 //  #08 //007   ----------------------------------------
 Label_0111F6B0:
  BYTE   N11  Cn1  v127
@@ -1303,7 +1303,7 @@ Label_0111F6B0:
  BYTE   W06
  BYTE   N11  As1
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 //  #08 //008   ----------------------------------------
 Label_0111F6EC:
  BYTE   N11  Cn1  v127
@@ -1341,7 +1341,7 @@ Label_0111F6EC:
  BYTE   W12
  BYTE   N11  As1
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 //  #08 //009   ----------------------------------------
  BYTE   PATT
   POIN2 Label_0111F633
@@ -1448,9 +1448,9 @@ DPPt_LegendaryPokemon_Song:
 	BYTE	0	// NumBlks
 	BYTE	DPPt_LegendaryPokemon_Song_pri	// Priority
 	BYTE	DPPt_LegendaryPokemon_Song_rev	// Reverb.
-
+    
 	POIN2	DPPt_LegendaryPokemon_Song_grp
-
+    
 	POIN2	DPPt_LegendaryPokemon_Song_001
 	POIN2	DPPt_LegendaryPokemon_Song_002
 	POIN2	DPPt_LegendaryPokemon_Song_003
@@ -1460,4 +1460,4 @@ DPPt_LegendaryPokemon_Song:
 	POIN2	DPPt_LegendaryPokemon_Song_007
 	POIN2	DPPt_LegendaryPokemon_Song_008
 
-
+	

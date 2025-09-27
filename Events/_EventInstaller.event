@@ -9,4 +9,8 @@ ENDA
 
 POP
 
+{
+	#include "ChapterHubA.event"
+}
+
 #include "REDAs.event" // thanks Snakey

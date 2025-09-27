@@ -604,7 +604,7 @@ Label_3_018E5FBE:
  BYTE   W24
  BYTE   N21
  BYTE   W19
- BYTE   PEND
+ BYTE   PEND 
  BYTE   PATT
   POIN2 Label_3_018E5FBE
 // 003   ----------------------------------------
@@ -618,7 +618,7 @@ Label_3_018E5FCF:
  BYTE   W24
  BYTE   N21
  BYTE   W19
- BYTE   PEND
+ BYTE   PEND 
  BYTE   PATT
   POIN2 Label_3_018E5FCF
  BYTE   PATT
@@ -670,7 +670,7 @@ Label_4_018E63FE:
  BYTE   Dn1
  BYTE   N03  Fs1
  BYTE   W19
- BYTE   PEND
+ BYTE   PEND 
  BYTE   PATT
   POIN2 Label_4_018E63FE
  BYTE   PATT
@@ -703,13 +703,13 @@ FE4_Neutral_Army_Song:
 	BYTE	0	// NumBlks
 	BYTE	FE4_Neutral_Army_Song_pri	// Priority
 	BYTE	FE4_Neutral_Army_Song_rev	// Reverb.
-
+    
 	POIN2	FE4_Neutral_Army_Song_grp
-
+    
 	POIN2	FE4_Neutral_Army_Song_001
 	POIN2	FE4_Neutral_Army_Song_002
 	POIN2	FE4_Neutral_Army_Song_003
 	POIN2	FE4_Neutral_Army_Song_004
 	POIN2	FE4_Neutral_Army_Song_005
 
-
+	

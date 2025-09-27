@@ -1255,7 +1255,7 @@ Label_01C6DDEE:
  BYTE   W06
  BYTE   N06
  BYTE   W06
- BYTE   PEND
+ BYTE   PEND 
 //  #06 //003   ----------------------------------------
 Label_01C6DE11:
  BYTE   N06  En1  v127
@@ -1290,7 +1290,7 @@ Label_01C6DE11:
  BYTE   W06
  BYTE   En1
  BYTE   W06
- BYTE   PEND
+ BYTE   PEND 
 //  #06 //004   ----------------------------------------
  BYTE   En0
  BYTE   W06
@@ -1848,7 +1848,7 @@ Label_01C6E04D:
  BYTE   W06
  BYTE   Cn1  v127
  BYTE   W06
- BYTE   PEND
+ BYTE   PEND 
 //  #07 //003   ----------------------------------------
 Label_01C6E085:
  BYTE   N06  Dn1  v124
@@ -1881,7 +1881,7 @@ Label_01C6E085:
  BYTE   W06
  BYTE   Cn1  v127
  BYTE   W06
- BYTE   PEND
+ BYTE   PEND 
 //  #07 //004   ----------------------------------------
 Label_01C6E0BD:
  BYTE   N06  Dn1  v124
@@ -1913,7 +1913,7 @@ Label_01C6E0BD:
  BYTE   Cn1  v127
  BYTE   N06  Cs2  v104
  BYTE   W12
- BYTE   PEND
+ BYTE   PEND 
 //  #07 //005   ----------------------------------------
  BYTE   PATT
   POIN2 Label_01C6E04D
@@ -2255,7 +2255,7 @@ Label_01C6E2C2:
  BYTE   W06
  BYTE   N06
  BYTE   W06
- BYTE   PEND
+ BYTE   PEND 
 //  #08 //003   ----------------------------------------
 Label_01C6E2E5:
  BYTE   N06  En1  v127
@@ -2290,7 +2290,7 @@ Label_01C6E2E5:
  BYTE   W06
  BYTE   En1
  BYTE   W06
- BYTE   PEND
+ BYTE   PEND 
 //  #08 //004   ----------------------------------------
  BYTE   En0
  BYTE   W06
@@ -3167,9 +3167,9 @@ NessiahSortie_Song:
 	BYTE	0	// NumBlks
 	BYTE	NessiahSortie_Song_pri	// Priority
 	BYTE	NessiahSortie_Song_rev	// Reverb.
-
+    
 	POIN2	NessiahSortie_Song_grp
-
+    
 	POIN2	NessiahSortie_Song_001
 	POIN2	NessiahSortie_Song_002
 	POIN2	NessiahSortie_Song_003
@@ -3182,4 +3182,4 @@ NessiahSortie_Song:
 	POIN2	NessiahSortie_Song_010
 	POIN2	NessiahSortie_Song_011
 
-
+	

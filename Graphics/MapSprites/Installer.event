@@ -1,30 +1,31 @@
-
-
 #include "Internals.event"
-#include "GeneratedInstaller.event"
 
+#define sz16x16 0
+#define sz16x32 1
+#define sz32x32 2
 
 //First free SMS is 107
-#define Cavalier_M_Sword_SALVAGEDstand 107 
-#define Soldier_F_Echoes_Lance_FireEmblemier_flasubanstand 108 
- 
- 
-//First free MMS is 127 and will show up if you've expanded classes.
-#define Cavalier_M_Sword_SALVAGEDwalk 127 
-#define Soldier_F_Echoes_Lance_FireEmblemier_flasubanwalk 128 
- 
+#define GreyLightRuneSMS 107
+ALIGN 4; GreyLightRuneSMS_Data:
+#incbin "dmp/GreyLightRuneSMS.dmp"
 
+#define Battle_Sage_SMS 108
+ALIGN 4; Battle_Sage_SMS_Data:
+#incbin "dmp/Battle_Sage_SMS.dmp"
+
+//First free MMS is 127
+#define Battle_Sage_MMS 1
+ALIGN 4; Battle_Sage_MMS_Data:
+#incbin "dmp/Battle_Sage_MMS.dmp"
 
 //Copy from here 
 PUSH 
- 
-SetSMS(Cavalier_M_Sword_SALVAGEDstand, 1, Cavalier_M_Sword_SALVAGEDstand_Data) 
-SetSMS(Soldier_F_Echoes_Lance_FireEmblemier_flasubanstand, 0, Soldier_F_Echoes_Lance_FireEmblemier_flasubanstand_Data) 
- 
- 
-SetMMS(Cavalier_M_Sword_SALVAGEDwalk, Cavalier_M_Sword_SALVAGEDwalk_Data, DemonKingAP) 
-SetMMS(Soldier_F_Echoes_Lance_FireEmblemier_flasubanwalk, Soldier_F_Echoes_Lance_FireEmblemier_flasubanwalk_Data, DemonKingAP) 
- 
+
+SetSMS(GreyLightRuneSMS, sz16x16, GreyLightRuneSMS_Data)
+SetSMS(Battle_Sage_SMS, sz16x32, Battle_Sage_SMS_Data)
+
+SetMMS(Battle_Sage_MMS, Battle_Sage_MMS_Data, NormalAP)
+
 POP 
 //Copy until here 
 

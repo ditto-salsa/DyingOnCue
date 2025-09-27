@@ -8,7 +8,7 @@
 
         // .rodata
         // Plantation_Crash_Zone66_Song
-        ALIGN 4
+        .align  2
 
 //****************** Track 0 (Midi-Chn.0) ******************//
 
@@ -11370,7 +11370,7 @@ Plantation_Crash_Zone66_Song_14_LOOP:
 
 //********************** End of Song ***********************//
 
-        ALIGN 4
+        .align  2
 Plantation_Crash_Zone66_Song:
         BYTE   15                      // Num Tracks
         BYTE   0                       // Unknown
@@ -11395,4 +11395,4 @@ Plantation_Crash_Zone66_Song:
         POIN2   Plantation_Crash_Zone66_Song_13
         POIN2   Plantation_Crash_Zone66_Song_14
 
-
+        

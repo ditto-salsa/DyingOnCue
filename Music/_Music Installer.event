@@ -1,11 +1,9 @@
+ALIGN 4
 #define SongTableOffset  0x224470
 //2263B0 is the end maybe?
 #include "drumfix_fe8.event"
 voicegroup000:
 #incbin "FE8_NI_2.bin"
-
-ALIGN 4
-//#include "AllInstrument/AllInstrument.event" // i hope i don't have to include this ever, but if i NEED it,
 
 #include "ea/MPlayDef.event"
 
@@ -45,7 +43,7 @@ SongTable(0x8,L_Mellia_Sortie_Song,0)
 #define MelliaSortie 0x8
 
 #include "ea/PointOfNoReturn.event"
-SongTable(0x9,PointOfNoReturn_Song,0)
+SongTable(0x9,PointOfNoReturn_Song,1)
 #define PointOfNoReturn 0x9
 
 #include "ea/GulcasaSortie.event"
@@ -91,6 +89,10 @@ SongTable(0x13,DPPt_LegendaryPokemon_Song,0)
 #include "ea/WaterWorld.event"
 SongTable(0x14,WaterWorld_Song,1)
 #define WaterWorld 0x14
+
+#include "ea/A_Cyber_s_World.event"
+SongTable(0x15,A_Cyber_s_World_Song,1)
+#define ACybersWorld 0x15
 
 #include "_SoundroomEditor.event"
 

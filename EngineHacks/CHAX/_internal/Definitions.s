@@ -1,4 +1,4 @@
-.include "fe8.s" 
+.include "_internal/fe8.s" 
 
 .macro SET_FUNC name, value
 	.global \name

@@ -8,7 +8,7 @@
 
         // .rodata
         // Your_Mission_RE2_Song
-        ALIGN 4
+        .align  2
 
 //****************** Track 0 (Midi-Chn.0) ******************//
 
@@ -2036,7 +2036,7 @@ Your_Mission_RE2_Song_12_LOOP:
 
 //********************** End of Song ***********************//
 
-        ALIGN 4
+        .align  2
 Your_Mission_RE2_Song:
         BYTE   13                      // Num Tracks
         BYTE   0                       // Unknown
@@ -2059,4 +2059,4 @@ Your_Mission_RE2_Song:
         POIN2   Your_Mission_RE2_Song_11
         POIN2   Your_Mission_RE2_Song_12
 
-
+        

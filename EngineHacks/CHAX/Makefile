@@ -1,4 +1,3 @@
-
 .SUFFIXES:
 .PHONY:
 
@@ -9,25 +8,38 @@ endif
 
 # Including devkitARM tool definitions
 include $(DEVKITARM)/base_tools
+
 # defining path of lyn
-LYN := "C:/devkitPro/lyn.exe"
+LYN := $(abspath .)/_internal/lyn.exe
+LYNREF :=$(abspath .)/_internal/Definitions.o
 
 # setting up compilation flags
-ARCH   := -mcpu=arm7tdmi -mthumb -mthumb-interwork
-CFLAGS := $(ARCH) -Wall -mtune=arm7tdmi -O2 -mlong-calls
+ARCH	:= -mcpu=arm7tdmi -mthumb -mthumb-interwork
+CFLAGS	:= $(ARCH) -Wall -O3 -mtune=arm7tdmi
+
+# header files location
+HEADER_FILES := $(abspath .)/_include
+ASSEMBLY_HEADERS := $(wildcard $(abspath .)/Tools/AssemblyHeaders/*.h.s)
+
+# getting all source files to compile
+SOURCE_FILES := $(patsubst %.c,%.lyn.event,$(wildcard EngineHacks/C/*.c))
+
+sources:
+	$(MAKE) $(SOURCE_FILES)
+
+reference:
+	$(MAKE) $(LYNREF)
 
 # C to ASM rule
-%.s: %.c *.c
-	$(CC) $(CFLAGS) -S $< -I ./Include -o $@ -fverbose-asm -mlong-calls
+%.s: %.c
+	$(CC) $(CFLAGS) -S $< -I $(HEADER_FILES) -o $@ -fverbose-asm -mlong-calls
 
+# ASM to OBJ
+%.o: %.s
+	$(AS) $(ARCH) $< -o $@
 
 # OBJ to EVENT rule
-%.lyn.event: %.o *.c
-	$(MAKE) $(dir $<)Definitions.o
-	$(LYN) "$<" "$(dir $<)Definitions.o" > "$@"
-	rm $(dir $<)Definitions.o
-	
-# ASM to OBJ
-%.o: %.s *.s
-	$(AS) $(ARCH) $< -o $@
-	
+%.lyn.event: %.o
+	$(LYN) $< $(LYNREF) > $@
+
+# .PRECIOUS: %.s

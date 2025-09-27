@@ -68,3 +68,6 @@ __pycache__
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# vscode config folder
+.vscode

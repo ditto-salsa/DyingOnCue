@@ -8,6 +8,8 @@ Soundroom(Sky_Peak_Final_Pass,9999,Sky_Peak_Final_Pass_Text)
 Soundroom(The_One_They_Call_Witch,9999,The_One_They_Call_Witch_Text)
 Soundroom(NessiahSortie,9999,NessiahSortie_Text)
 Soundroom(GulcasaSortie,9999,GulcasaSortie_Text)
+Soundroom(ClashingOfWaves,9999,PointOfNoReturn_Text) // text placeholder
+Soundroom(SmartRace,9999,PointOfNoReturn_Text) // "
 WORD (-1) 0 0 0
 
 //Repointing

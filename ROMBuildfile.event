@@ -9,12 +9,6 @@ ORG FreeSpace
 #define EndOfTextSpace "currentOffset - StartOfTextSpace"
 MESSAGE Used text space is EndOfTextSpace big and ends at currentOffset
 
-//CSV tables
-#define StartOfTableSpace currentOffset
-#include "Tables/TableInstaller.event"
-#define EndOfTableSpace "currentOffset - StartOfTableSpace"
-MESSAGE Used table space is EndOfTableSpace big and ends at currentOffset
-
 //Engine Hacks
 #define StartOfHaxSpace currentOffset
 #include "EngineHacks/_EngineHacksInstaller.event"
@@ -32,6 +26,13 @@ MESSAGE Used graphics space is EndOfGraphicsSpace big and ends at currentOffset
 #include "Music/_Music Installer.event"
 #define EndOfMusicSpace "currentOffset - StartOfMusicSpace"
 MESSAGE Used music space is EndOfMusicSpace big and ends at currentOffset
+
+//CSV tables
+#define StartOfTableSpace currentOffset
+#include "Tables/TableInstaller.event"
+#include "Tables/ExternalTableData.event"
+#define EndOfTableSpace "currentOffset - StartOfTableSpace"
+MESSAGE Used table space is EndOfTableSpace big and ends at currentOffset
 
 //Events
 #define StartOfEventsSpace currentOffset

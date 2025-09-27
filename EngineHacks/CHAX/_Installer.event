@@ -1,2 +1,4 @@
-#include "_InstallAllC.event"
+#include "Main.lyn.event"
 // Anything else needed can be put here
+#include "UnitMenu/_Installer.event"
+#include "Supply/_Installer.event"

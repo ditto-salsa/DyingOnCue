@@ -1,0 +1,166 @@
+SetChapterEvents(0x1, ThisChapter)
+
+setText(0x160, NewChName)
+ALIGN 4; NewChName:
+String("Forbidden Chapel"); BYTE 0
+
+ALIGN 4; ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN PlayerUnits PlayerUnits
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0,ChangeCommander,2)
+END_MAIN
+
+ALIGN 32
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+PlayerUnits:
+UNIT 0x1 0x2 0x1 Level(20,Ally,False) [7,7] 0 0 0 1 [Elixir] NoAI
+UNIT
+
+ALIGN 4
+BeginningScene:
+EVBIT_MODIFY 1
+WEATHER 0x7
+ASMC 0x80311A9 // RefreshBMapGraphics
+LOAD1 0 PlayerUnits; ENUN
+
+CHECK_EVENTID LazarusClearedFlag
+BEQ 0 sC s0
+AddTrap(PassableGreyLightRuneTrapID,2,5)
+GOTO 1
+LABEL 0
+AddTrap(PassableLightRuneTrapID,2,5)
+LABEL 1
+
+CHECK_EVENTID SamaelClearedFlag
+BEQ 2 sC s0
+AddTrap(PassableGreyLightRuneTrapID,12,5)
+GOTO 3
+LABEL 2
+AddTrap(PassableLightRuneTrapID,12,5)
+LABEL 3
+
+CHECK_EVENTID JessClearedFlag
+BEQ 4 sC s0
+AddTrap(PassableGreyLightRuneTrapID,5,8)
+GOTO 5
+LABEL 4
+AddTrap(PassableLightRuneTrapID,5,8)
+LABEL 5
+
+CHECK_EVENTID SerolClearedFlag
+BEQ 6 sC s0
+AddTrap(PassableGreyLightRuneTrapID,9,8)
+GOTO 7
+LABEL 6
+AddTrap(PassableLightRuneTrapID,9,8)
+LABEL 7
+
+CHECK_EVENTID LazarusClearedFlag
+BEQ 8 sC s0
+CHECK_EVENTID SamaelClearedFlag
+BEQ 8 sC s0
+CHECK_EVENTID JessClearedFlag
+BEQ 8 sC s0
+CHECK_EVENTID SerolClearedFlag
+BEQ 8 sC s0
+LABEL 8
+
+SCOORD s1 [2,5]
+SVAL s2 LazarusSigilEvent|0x8000000
+ASMC SetSigilEvent
+
+SCOORD s1 [12,5]
+SVAL s2 SamaelSigilEvent|0x8000000
+ASMC SetSigilEvent
+
+SCOORD s1 [5,8]
+SVAL s2 JessSigilEvent|0x8000000
+ASMC SetSigilEvent
+
+SCOORD s1 [9,8]
+SVAL s2 SerolSigilEvent|0x8000000
+ASMC SetSigilEvent
+
+SVAL s1 0x1D
+SVAL s2 0x1 // Lorien
+SVAL s3 9
+ASMC SetUnitStats
+
+FADU 16
+EVBIT_MODIFY 0
+ENUT NoWaitOrEndFlag
+NoFade; ENDA
+
+EndingScene:
+NoFade; ENDA
+
+ChangeCommander:
+SVAL s1 0x2
+SVAL s2 0x2
+ASMC SetUnitCommander
+NoFade; ENDA
+
+LazarusSigilEvent:
+EVBIT_MODIFY 1
+TutorialTextBox(LazarusSigilAskText)
+SVAL s1 1
+BNE 0 sC s1
+TutorialTextBox(ThisSigilIsNotReadyText)
+LABEL 0
+NoFade; ENDA
+
+SamaelSigilEvent:
+EVBIT_MODIFY 1
+TutorialTextBox(SamaelSigilAskText)
+SVAL s1 1
+BNE 0 sC s1
+TutorialTextBox(ThisSigilIsNotReadyText)
+LABEL 0
+NoFade; ENDA
+
+JessSigilEvent:
+EVBIT_MODIFY 1
+TutorialTextBox(JessSigilAskText)
+SVAL s1 1
+BNE 0 sC s1
+TutorialTextBox(ThisSigilIsNotReadyText)
+LABEL 0
+NoFade; ENDA
+
+SerolSigilEvent:
+EVBIT_MODIFY 1
+TutorialTextBox(SerolSigilAskText)
+SVAL s1 1
+BNE 0 sC s1
+TutorialTextBox(ThisSigilIsNotReadyText)
+LABEL 0
+NoFade; ENDA

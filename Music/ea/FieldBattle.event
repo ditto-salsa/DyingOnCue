@@ -2998,7 +2998,7 @@ rottk4fb_Song:
         BYTE   rottk4fb_Song_pri            // Priority
         BYTE   rottk4fb_Song_rev            // Reverb
 
-        POIN2   rottk4fb_Song_grp
+        POIN2   rottk4fb_Song_grp           
 
         POIN2   rottk4fb_Song_0
         POIN2   rottk4fb_Song_1
@@ -3008,4 +3008,4 @@ rottk4fb_Song:
         POIN2   rottk4fb_Song_5
         POIN2   rottk4fb_Song_6
 
-
+        

@@ -1764,7 +1764,7 @@ rffield_Song:
         BYTE   rffield_Song_pri             // Priority
         BYTE   rffield_Song_rev             // Reverb
 
-        POIN2   rffield_Song_grp
+        POIN2   rffield_Song_grp            
 
         POIN2   rffield_Song_0
         POIN2   rffield_Song_1
@@ -1776,4 +1776,4 @@ rffield_Song:
         POIN2   rffield_Song_7
         POIN2   rffield_Song_8
 
-
+        

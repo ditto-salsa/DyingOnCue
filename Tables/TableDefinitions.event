@@ -145,4 +145,6 @@
 //status staves will give 
 #define ItemStatus(StatusID,Duration) "StatusID | (Duration << 4)"
 
+#define IsPointer 0x8000000
+
 #endif

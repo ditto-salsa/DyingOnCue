@@ -1,0 +1,9 @@
+PUSH
+
+// Allow supply in prologue map slot
+ORG 0x31646; SHORT 0x46C0
+
+// free postgame unit joining flags
+ORG 0x37D68; SHORT 0x2000 0x4770
+
+POP
