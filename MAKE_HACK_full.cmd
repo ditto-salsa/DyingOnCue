@@ -10,9 +10,9 @@ set "source_rom=%~dp0FE8_clean.gba"
 
 set "main_event=%~dp0ROMBuildfile.event"
 
-set "target_rom=%~dp0DyingOnCue.gba"
-set "target_ups=%~dp0DyingOnCue.ups"
-set "target_sym=%~dp0DyingOnCue.sym"
+set "target_rom=%~dp0dittohack.gba"
+set "target_ups=%~dp0dittohack.ups"
+set "target_sym=%~dp0dittohack.sym"
 
 @rem defining tools
 
