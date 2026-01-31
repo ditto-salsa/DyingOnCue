@@ -4,8 +4,8 @@
 #define ChapterDataTable 0x8B0890
 #define ChapterDataTableEntSize 148
 
-// #include "_TableDefsInstaller.event"
-#include "EffectivenessRework.event"
+#include "CharacterDefs.event"
+#include "ClassDefs.event"
 #include "FlagDefs.event"
 #include "CodeDefs.event"
 #include "EventDefs.event"

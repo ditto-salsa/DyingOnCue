@@ -1,6 +1,4 @@
-// All of that juicy chax stuff
-#include "CHAX/_Installer.event"
-
+#include "DittoASMDefs.event" // i aspire to be my biggest shill
 #include "_FE8EssentialFixes.event"
 #include "InlineChanges.event"
 
@@ -9,3 +7,14 @@
 
 // By circleseverywhere,7743,gamma
 #include "ExternalHacks/ChapterNamesAsText/fe8_chnames.event"
+
+// ItemRangeFix by Tequila/Lord Reyson/Teraspark
+#include "ExternalHacks/ItemRangeFix/ItemRangeFix.event"
+
+// hacks & whatnot by me (in the folder with my name on it)
+#include "DittoHacks/CalcLoops/PrebattleCalcLoop.event"
+#include "DittoHacks/CalcLoops/PostbattleCalcLoop.event"
+#include "DittoHacks/CalcLoops/BattleProcCalcLoop.event"
+#include "DittoHacks/CalcLoops/RangeCalcLoop.event"
+
+#include "DittoHacks/StatGetters/_StatGetters.event"

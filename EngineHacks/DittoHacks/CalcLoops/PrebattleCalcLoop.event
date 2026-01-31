@@ -1,0 +1,43 @@
+ALIGN 4; PreBattleFunctions: // Make sure to set THUMB bit if running THUMB code!
+POIN 0x2AC61 0x2AC91 0x2ACF9 0x2ADCD // Vanilla functions
+WORD 0 // Terminator
+
+
+
+
+
+// Hook & Code
+// Pre battle calc loop code, inserted inline, source below
+PUSH
+ORG 0x2A9A8
+SHORT 0xB513 0x4C06 0x6822 0x2A00 0xD005 0x9800 0x9901 0xF0A6 0xFF87 0x3404 0xE7F6 0xBC13 0xBC01 0x4700
+POIN PreBattleFunctions
+POP
+
+/*
+.thumb
+
+.set FunctionList, EALiterals
+
+push {r0, r1, r4, r14}
+// keep pointer to FunctionList in r4
+ldr r4, FunctionList
+
+Loop:
+ldr r2, [r4]
+cmp r2, #0 // null terminated pointer list
+beq End
+ldr r0, [r13]
+ldr r1, [r13, #0x4]
+bl bx_r2 // using bl to bx trampoline here so that arm code *can* be called if desired
+add r4, #4
+b Loop
+
+End:
+pop {r0, r1, r4}
+pop {r0}
+bx r0
+
+.align
+EALiterals:
+*/

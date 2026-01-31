@@ -42,22 +42,10 @@
 #define NegateCriticals 0x00008000
 #define CannotUse 0x00010000
 #define NegateDef 0x00020000
-#ifdef _FE8_
-  #define EirikaLock 0x00040000
-  #define EphraimLock 0x00080000
-  #define WeaponLock3 0x00100000
-  #define WeaponLock4 0x00200000
-#endif
-#ifdef _FE7_
-  #define EliwoodLock 0x00040000
-  #define HectorLock 0x00080000
-  #define LynLock 0x00100000
-  #define AthosLock 0x00200000
-#endif
-
-//Used For Consolidated AdvWeaponLocks 
-#define AdvWeaponLock 0x01000000
-
+#define EirikaLock 0x00040000
+#define EphraimLock 0x00080000
+#define WeaponLock3 0x00100000
+#define WeaponLock4 0x00200000
 
 // Weapon Effect
 #define NoEffect 0x0
@@ -88,12 +76,7 @@
 #define UnlockLock1 0x00010000
 #define SwordmasterUnlock 0x00020000
 #define UseMonsterWeapons 0x00040000
-#ifdef _FE7_
-  #define Morph 0x00080000
-#endif
-#ifdef _FE8_
-  #define TraineeLevelCap 0x00080000
-#endif
+#define TraineeLevelCap 0x00080000
 #define CannotControl 0x00100000
 #define TriangleAttack 0x00200000
 #define TriangleAttack2 0x00400000
@@ -101,20 +84,11 @@
 #define GiveNoExp 0x01000000
 #define Lethality 0x02000000
 #define IsMagicSeal 0x04000000
-#ifdef _FE7_
-  #define DropLastItem 0x08000000
-  #define UnlockEliwood 0x10000000
-  #define UnlockHector 0x20000000
-  #define UnlockLyn 0x40000000
-  #define UnlockAthos 0x80000000
-#endif
-#ifdef _FE8_
-  #define Summoning 0x08000000
-  #define UnlockEirika 0x10000000
-  #define UnlockEphraim 0x20000000
-  #define UnlockLock3 0x40000000
-  #define UnlockLock4 0x80000000
-#endif
+#define Summoning 0x08000000
+#define UnlockEirika 0x10000000
+#define UnlockEphraim 0x20000000
+#define UnlockLock3 0x40000000
+#define UnlockLock4 0x80000000
 
 // Affinity
 #define NoAffinity 0

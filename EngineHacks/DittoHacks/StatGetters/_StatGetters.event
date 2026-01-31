@@ -1,0 +1,73 @@
+#include "InjectMovGetters.event"
+#include "InjectConGetters.event"
+#include "InjectHPGetters.event"
+
+ThumbFunc(MaxHPGetter)
+
+ThumbFunc(CurHPGetter)
+
+ThumbFunc(PowGetter)
+
+ThumbFunc(SklGetter)
+
+ThumbFunc(SpdGetter)
+
+ThumbFunc(DefGetter)
+
+ThumbFunc(ResGetter)
+
+ThumbFunc(ConGetter)
+
+ThumbFunc(AidGetter)
+
+ThumbFunc(MovGetter)
+#incbin "Mov/MovGetter.bin"
+
+PUSH
+	ORG 0x19190
+	prGotoMaxHPGetter:
+		jumpToHack(MaxHPGetter)
+
+	ORG 0x19150
+	prGotoCurHPGetter:
+		jumpToHack(CurHPGetter)
+
+	ORG 0x191B0
+	prGotoPowGetter:
+		jumpToHack(PowGetter)
+
+	ORG 0x191D0
+	prGotoSklGetter:
+		jumpToHack(SklGetter)
+
+	ORG 0x19210
+	prGotoSpdGetter:
+		jumpToHack(SpdGetter)
+
+	ORG 0x19250
+	prGotoDefGetter:
+		jumpToHack(DefGetter)
+
+	ORG 0x19270
+	prGotoResGetter:
+		jumpToHack(ResGetter)
+
+	ORG 0x19298
+	prGotoLckGetter:
+		jumpToHack(LckGetter)
+
+	ORG 0x189B8
+	prGotoAidGetter:
+		jumpToHack(AidGetter)
+	
+	// Replaces part of old spd getter
+	ORG 0x19224
+	prGotoMovGetter:
+		jumpToHack(MovGetter)
+	
+	// Replaces part of old res getter
+	ORG 0x19284
+	prGotoConGetter:
+		jumpToHack(ConGetter)
+POP
+

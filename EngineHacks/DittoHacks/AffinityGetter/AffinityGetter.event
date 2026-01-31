@@ -1,0 +1,93 @@
+ALIGN 4; AffinityFunctionList: // Make sure that the THUMB bit is set when calling THUMB code!
+POIN AffinityFromCharData
+WORD 0 // Terminator
+
+/*
+	AffinityGetter by ditto
+
+	This engine hack aims to allow easy modification of affinities for characters without having to change character IDs.
+	It does this by running functions from a list, akin to skillsys' calc loops.
+	
+	Each function is given two parameters:
+		
+		r0 - Unit pointer of the unit you're getting the affinity for
+		r1 - Pointer to a word of stack space
+	
+	And each function returns 0 if the loop is to continue, non-zero means the loop will terminate.
+	
+	The affinity itself is written to the stack space given as a parameter to the function, and this affinity will be read and used when the loop terminates.
+	So you do not need to set it unless you are returning non-zero as well.
+	
+	NOTE: IF USING ICON REWORK, YOU WILL NEED TO EDIT THE CODE THERE TO GET AFFINITIES USING THE GETTER.
+	
+*/
+
+//#define FreeSpaceBLRange 0x1C1EC0 // !! Change this to match your in BL range freespace !!
+
+//#include "DittoASMDefs.event"
+
+PUSH
+
+// Hooks into vanilla code
+
+// in GetUnitAffinityIcon
+ORG 0x286BE
+BL(GotoAffinityGetter)
+
+// in GetCharacterAffinityIcon
+ORG 0x286D6
+BL(GetStructFromCharID_GotoAffinityGetter)
+SHORT 0x46C0 // nop
+
+// in DrawSupportSubScreenUnitPartnerText
+ORG 0xA1D98
+BL(GetStructFromCharID_GotoAffinityGetter)
+SHORT 0x1C01 // mov r1, r0
+
+// in GetPidStats (BWL_GetEntry)
+ORG 0xA4D0A
+BL(GetStructFromCharID_GotoAffinityGetter)
+SHORT 0x46C0 // nop
+
+// in GetUnitSupportBonuses
+ORG 0x28644
+BL(GetUnitSupportBonuses_GotoAffinityGetter)
+ORG 0x28658
+BL(GetUnitSupportBonuses_GotoAffinityGetter)
+
+// In BL Range freespace
+ORG FreeSpaceBLRange
+
+AffinityGetterCallHack:
+SHORT 0x4901 // ldr r1, AffinityGetter
+BL(0xD18C4) // bl call_via_r1
+SHORT 0xBD00 // pop {r15}
+POIN AffinityGetter
+
+GotoAffinityGetter:
+SHORT 0xB500 // push {r14}
+B(AffinityGetterCallHack)
+
+GetStructFromCharID_GotoAffinityGetter: // takes char ID in r0, goes to getter and returns affinity in r0
+SHORT 0xB500 // push {r14}
+BL(0xBC51) // bl GetUnitStructFromEventParameter
+B(AffinityGetterCallHack)
+
+GetUnitSupportBonuses_GotoAffinityGetter:
+SHORT 0xB500 // push {r14}
+BL(GotoAffinityGetter)
+SHORT 0x1C01 // mov r1, r0
+SHORT 0x1C30 // mov r0, r6
+SHORT 0xBD00 // pop {r15}
+
+#undef FreeSpaceBLRange
+#define FreeSpaceBLRange CURRENTOFFSET
+
+POP
+
+ThumbFunc(AffinityGetter)
+#incbin "asm/AffinityGetter.bin"
+POIN AffinityFunctionList
+
+ThumbFunc(AffinityFromCharData)
+#incbin "asm/AffinityFromCharData.bin"

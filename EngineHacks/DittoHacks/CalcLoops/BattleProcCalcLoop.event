@@ -1,0 +1,17 @@
+ALIGN 4; BattleProcFunctions: // Make sure to set THUMB bit if running THUMB code!
+WORD 0 // Terminator
+
+
+
+
+
+
+// Hook & Code
+PUSH
+ORG 0x2B3EC
+jumpToHack(r2, BattleProcCalcLoop)
+POP
+
+ThumbFunc(BattleProcCalcLoop)
+#incbin "asm/BattleProcCalcLoop.bin"
+POIN BattleProcFunctions

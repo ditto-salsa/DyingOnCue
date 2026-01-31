@@ -1,5 +1,0 @@
-#define LazarusClearedFlag 0x67
-#define SamaelClearedFlag 0x68
-#define JessClearedFlag 0x69
-#define SerolClearedFlag 0x6A
-#define NoWaitOrEndFlag 0x6B

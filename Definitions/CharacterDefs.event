@@ -1,0 +1,5 @@
+#define Lazarus 0x1
+#define Shino 0x2
+#define Jess 0x3
+#define Celeria 0x4
+#define Simon 0x5

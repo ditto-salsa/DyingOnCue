@@ -37,13 +37,7 @@ copy "%source_rom%" "%target_rom%"
 if /I not [%1]==[quick] (
 
   @rem only do the following if this isn't a make hack quick
-  
-  echo:
-  echo Creating definitions from tables...
-  
-  cd "%base_dir%"
-  %CSVDefCreator% Definitions\ Tables\NightmareModules\CharactersClasses\CharacterTable.csv Tables\NightmareModules\CharactersClasses\ClassTable.csv Tables\NightmareModules\Items\ItemTable.csv
-
+ 
   echo:
   echo Processing tables
 
@@ -61,20 +55,7 @@ if /I not [%1]==[quick] (
 
   cd "%base_dir%Maps"
   echo: | ("%tmx2ea%" -s -O "MasterMapInstaller.event")
-  
-  echo:
-  echo Fixing tmx2ea's macros for my own purposes god why can't I do anything the easy way
-  
-  cd "%base_dir%Tools\PTABLE_Macro_Fix\
-  PTABLE_Macro_Fix.exe
-  
 )
-
-echo:
-echo Compiling C code in CHAX folder...
-  
-cd "%base_dir%EngineHacks\CHAX"
-make Main.lyn.event
 
 echo:
 echo Assembling
@@ -98,9 +79,6 @@ echo:
 echo Generating sym file
 
 echo: | ( "%symcombo%" "%target_sym%" "%target_sym%" "%base_dir%\Tools\sym\VanillaOffsets.sym" )
-
-cd "%base_dir%EngineHacks\CHAX"
-del Main.lyn.event
 
 echo:
 echo Done!

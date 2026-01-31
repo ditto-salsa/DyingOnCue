@@ -1,0 +1,163 @@
+{ // this has to be scoped because i want definitions to be short
+
+#define CharTableOffset(x) "ORG CharacterTable+(Char*0x34)+x"
+#define Name(x) "CharTableOffset(0x0); SHORT x"
+#define Desc(x) "CharTableOffset(0x2); SHORT x"
+#define ID(x) "CharTableOffset(0x4); BYTE x"
+#define MenuClass(x) "CharTableOffset(0x5); BYTE x"
+#define Portrait(x) "CharTableOffset(0x6); SHORT x"
+#define Mini(x) "CharTableOffset(0x8); BYTE x"
+#define Affinity(x) "CharTableOffset(0x9); BYTE x"
+#define SortOrder(x) "CharTableOffset(0xA); BYTE x"
+#define Level(x) "CharTableOffset(0xB); BYTE x"
+#define HP(x) "CharTableOffset(0xC); BYTE x"
+#define Pow(x) "CharTableOffset(0xD); BYTE x"
+#define Skl(x) "CharTableOffset(0xE); BYTE x"
+#define Spd(x) "CharTableOffset(0xF); BYTE x"
+#define Def(x) "CharTableOffset(0x10); BYTE x"
+#define Res(x) "CharTableOffset(0x11); BYTE x"
+#define Luck(x) "CharTableOffset(0x12); BYTE x"
+#define Con(x) "CharTableOffset(0x13); BYTE x"
+#define SwordRank(x) "CharTableOffset(0x14); BYTE x"
+#define LanceRank(x) "CharTableOffset(0x15); BYTE x"
+#define AxeRank(x) "CharTableOffset(0x16); BYTE x"
+#define BowRank(x) "CharTableOffset(0x17); BYTE x"
+#define StaffRank(x) "CharTableOffset(0x18); BYTE x"
+#define AnimaRank(x) "CharTableOffset(0x19); BYTE x"
+#define LightRank(x) "CharTableOffset(0x1A); BYTE x"
+#define DarkRank(x) "CharTableOffset(0x1B); BYTE x"
+#define HPGrowth(x) "CharTableOffset(0x1C); BYTE x"
+#define PowGrowth(x) "CharTableOffset(0x1D); BYTE x"
+#define SklGrowth(x) "CharTableOffset(0x1E); BYTE x"
+#define SpdGrowth(x) "CharTableOffset(0x1F); BYTE x"
+#define DefGrowth(x) "CharTableOffset(0x20); BYTE x"
+#define ResGrowth(x) "CharTableOffset(0x21); BYTE x"
+#define LuckGrowth(x) "CharTableOffset(0x22); BYTE x"
+#define Attributes(x) "CharTableOffset(0x28); WORD x"
+#define Supports(x) "CharTableOffset(0x2C); POIN x"
+#define ConvoGroup(x) "CharTableOffset(0x30); BYTE x"
+PUSH
+
+#define Char Lazarus
+
+	Name(LazarusName); Desc(LazarusDesc)
+	ID(Lazarus)
+	MenuClass(SageF)
+	Portrait(LazarusMug); Mini(0)
+	Affinity(FireAffinity)
+	
+	Level(1)
+	HP(20)
+	Pow(11)
+	Skl(5)
+	Spd(7)
+	Luck(8)
+	Def(0)
+	Res(6)
+	Con(0)
+	
+	SwordRank(0); LanceRank(0); AxeRank(0); BowRank(0)
+	StaffRank(0); AnimaRank(DRank); LightRank(0); DarkRank(0)
+	
+	HPGrowth(99); PowGrowth(99); SklGrowth(99); SpdGrowth(99)
+	LuckGrowth(99); DefGrowth(99); ResGrowth(99)
+	
+	Attributes(0)
+	
+	Supports(0)
+	
+#undef Char
+
+#define Char Jess
+
+	Name(JessName); Desc(JessDesc)
+	ID(Jess)
+	MenuClass(PirateF)
+	Portrait(JessMug); Mini(0)
+	Affinity(FireAffinity)
+	
+	Level(3)
+	HP(27)
+	Pow(9)
+	Skl(4)
+	Spd(9)
+	Luck(5)
+	Def(5)
+	Res(8)
+	Con(0)
+	
+	SwordRank(0); LanceRank(0); AxeRank(DRank); BowRank(0)
+	StaffRank(0); AnimaRank(0); LightRank(0); DarkRank(0)
+	
+	HPGrowth(65); PowGrowth(65); SklGrowth(0); SpdGrowth(65)
+	LuckGrowth(125); DefGrowth(30); ResGrowth(45)
+	
+	Attributes(0)
+	
+	Supports(0)
+
+#undef Char
+
+#define Char Celeria
+
+	Name(CeleriaName); Desc(CeleriaDesc)
+	ID(Celeria)
+	MenuClass(SniperF)
+	Portrait(CeleriaMug); Mini(0)
+	Affinity(LightAffinity)
+	
+	Level(1)
+	HP(25)
+	Pow(13)
+	Skl(18)
+	Spd(16)
+	Luck(15)
+	Def(0)
+	Res(8)
+	Con(0)
+	
+	SwordRank(0); LanceRank(0); AxeRank(0); BowRank(ARank)
+	StaffRank(0); AnimaRank(0); LightRank(0); DarkRank(0)
+	
+	HPGrowth(65); PowGrowth(50); SklGrowth(45); SpdGrowth(15)
+	LuckGrowth(100); DefGrowth(0); ResGrowth(100)
+	
+	Attributes(0)
+	
+	Supports(0)
+	
+#undef Char
+
+#define Char Simon
+
+	Name(SimonName); Desc(SimonDesc)
+	ID(Simon)
+	#define StaffArmour 0x1
+	MenuClass(StaffArmour)
+	Portrait(SimonMug); Mini(0)
+	Affinity(AnimaAffinity)
+	
+	Level(5)
+	HP(27)
+	Pow(16)
+	Skl(0)
+	Spd(6)
+	Luck(15)
+	Def(10)
+	Res(6)
+	Con(0)
+	
+	SwordRank(0); LanceRank(0); AxeRank(0); BowRank(0)
+	StaffRank(DRank); AnimaRank(0); LightRank(0); DarkRank(0)
+	
+	HPGrowth(100); PowGrowth(70); SklGrowth(5); SpdGrowth(0)
+	LuckGrowth(65); DefGrowth(50); ResGrowth(45)
+	
+	Attributes(0)
+	
+	Supports(0)
+	
+#undef Char
+
+POP
+}

@@ -1,5 +1,32 @@
-## LorienName
-Lorien[X]
+## LazarusName
+Lazarus[x]
 
-## LorienDesc
-descs later gaming first[X]
+## LazarusDesc
+this woman is GAY btw[x]
+
+## ShinoName
+Shino[x]
+
+## ShinoDesc
+maybe i'll give someone[n]
+a placeholder desc that isn't[n]
+about their sexuality[x]
+
+## JessName
+Jess[x]
+
+## JessDesc
+fisherwoman extrodinaire[n]
+finish desc later[x]
+
+## CeleriaName
+Celeria[x]
+
+## CeleriaDesc
+this woman is NOT gay btw[x]
+
+## SimonName
+Simon[x]
+
+## SimonDesc
+best unit bc staves[x]
